@@ -207,6 +207,7 @@ ul#menu li a {
   right: 0;
   z-index: 2;
   color: currentColor;
+  background-color: none;
 }
 
 .grid-item-wrapper img {
@@ -306,6 +307,7 @@ ul#menu li a {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 999;
 }
 
 .overlay:target {
@@ -317,10 +319,11 @@ ul#menu li a {
   margin: 70px auto;
   padding: 20px;
   background: #fff;
-  border-radius: 5px;
-  width: 30%;
+  border-radius: 10px;
+  width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
+  z-index: 1000 !important;
 }
 
 .popup h2 {
@@ -347,6 +350,7 @@ ul#menu li a {
 .popup .content {
   max-height: 30%;
   overflow: auto;
+  text-align: justify;
 }
 
 @media screen and (max-width: 700px) {
