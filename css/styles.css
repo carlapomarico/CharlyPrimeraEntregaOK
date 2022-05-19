@@ -225,18 +225,54 @@ ul#menu li a {
   object-fit: contain;
 }
 
+img .moreanlogo {
+  color: #4343F2;
+  filter: sepia(8%) saturation(100);
+  -webkit-filter: sepia(8%) saturation(100);
+}
+
+.yoizenlogo {
+  color: #4CCBC2;
+  filter: sepia(8%) saturation(100);
+  -webkit-filter: sepia(8%) saturation(100);
+}
+
+.istlyrlogo {
+  color: #ff1e87;
+  filter: sepia(8%) saturation(100);
+  -webkit-filter: sepia(8%) saturation(100);
+}
+
 .grid-item-wrapper {
   -webkit-box-sizing: initial;
   -moz-box-sizing: initial;
   box-sizing: initial;
   background: #f9f9f9;
-  margin: 0;
+  margin: auto;
   height: 100%;
   width: 100%;
   overflow: hidden;
   -webkit-transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+}
+
+.wrapper-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1em;
+  border: #23c486;
+}
+
+.wrapper-child a {
+  color: #23c486;
+}
+
+.wrapper-child a:hover {
+  color: #C42360;
 }
 
 .grid-item-container {
@@ -246,7 +282,6 @@ ul#menu li a {
 }
 
 .grid-item:hover .grid-item-wrapper {
-  background-color: #23C486;
   margin: -2% -2%;
 }
 
