@@ -1,50 +1,48 @@
-// // When the user scrolls the page, execute myFunction
-// window.onscroll = function() {myFunction()};
 
-// // Get the navbar
-// var navbar = document.getElementById("navbar");
+$( document ).ready(function () {
 
-// // Get the offset position of the navbar
-// var sticky = navbar.offsetTop;
+    // By default
+    $('.en_lang').addClass("active-lang");
+    $('#lang-switch .en').addClass("active-side");
 
-// //
+    // Function switch
+    $(function () {
+        // Spanish button
+        $("#lang-switch .es").click(function () {
 
-// function responsiveFunction() {
-//   var x = document.getElementById("thenavbar");
-//   if (x.className === "navbar") {
-//     x.className += " responsive";
-//   } else {
-//     x.className = "navbar";
-//   }
-// }
+            // Enable Spanish
+            $('.es_lang').addClass("active-lang");
 
-// // Make Menu Responsive 
+            // Disable English
+            $('.en_lang').removeClass("active-lang");
 
-// const hamburger = document.querySelector(".hamburger");
-// const navMenu = document.querySelector(".nav-menu");
+        });
 
-// hamburger.addEventListener("click", mobileMenu);
+        // English button
+        $("#lang-switch .en").click(function () {
 
-// function mobileMenu() {
-//     hamburger.classList.toggle("active");
-//     navMenu.classList.toggle("active");
-// }
+            // Enable English
+            $('.en_lang').addClass("active-lang");
 
-// const navLink = document.querySelectorAll(".nav-link");
+            // Disable Spanish
+            $('.es_lang').removeClass("active-lang");
+        });
+    });
+});
 
-// navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-// function closeMenu() {
-//     hamburger.classList.remove("active");
-//     navMenu.classList.remove("active");
-// }
-
-// Add the sticky class 
-
-// function stickyFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
+/* $(function(){
+// Kui ma klikin ID-ga eng elemendi peale
+$("#eng").click(function(){
+  //klassiga german, kao vaikselt ära
+  $(".german").fadeOut();
+     //klassiga english, tule vaikselt esile
+   $(".english").fadeIn();
+});
+// Kui ma klikin ID-ga de elemendi peale
+$("#de").click(function(){
+    //klassiga english, kao vaikselt ära
+   $(".english").hide();
+      //klassiga german, tule vaikselt esile
+  $(".german").show();
+});
+}); */
