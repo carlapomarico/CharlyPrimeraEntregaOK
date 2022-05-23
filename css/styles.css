@@ -6,7 +6,7 @@
 }
 
 html,
-body {
+.mybody {
   height: 100%;
   width: 100%;
   background-color: #F9F9F9;
@@ -73,12 +73,9 @@ ul#menu li a {
 }
 
 @media screen and (max-width: 800px) {
-  body {
+  .mybody {
     margin: 0;
-  }
-
-  #post-body {
-    margin: 5%;
+    background-color: #f9f9f9;
   }
 
   .nav-menu {
@@ -116,8 +113,10 @@ ul#menu li a {
   /* Toggle */
 
   .nav-toggle-label:before {
-    color: white;
+    color: #f9f9f9;
     content: '☰';
+    font-size: 2em;
+    margin: 10px;
   }
 
   .nav-toggle:checked+ul#menu {
@@ -166,7 +165,26 @@ ul#menu li a {
   align-content: space-between
 }
 
-/* Agrgar mediaqueries para about responsive */
+@media(max-width: 800px) {
+  #circle-shape {
+    align-content: center;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  #circle-shape p {
+    min-width: 100%;
+    display: grid;
+    margin: auto;
+  }
+
+
+  #circle-shape img {
+    justify-content: center;
+    width: 80%;
+    display: grid;
+  }
+}
 
 /* Experience Styles */
 
@@ -381,18 +399,19 @@ img .moreanlogo {
 }
 
 .popup .content {
-  max-height: 30%;
+  max-height: 40%;
   overflow: auto;
   text-align: justify;
 }
 
 @media screen and (max-width: 700px) {
-  .box {
-    width: 70%;
-  }
 
   .popup {
-    width: 70%;
+    width: 80%;
+  }
+
+  .content p {
+    overflow: scroll;
   }
 }
 
@@ -502,9 +521,10 @@ fieldset {
 
 /* Sticky */
 
-body>footer {
+.mybody>footer {
   position: sticky;
   top: 100vh;
+  background-color: #f9f9f9;
 }
 
 #lab_social_icon_footer {
@@ -637,11 +657,11 @@ body>footer {
   justify-content: center;
 }
 
-input.check-toggle-round-flat:checked~.off {
+input.check-toggle-round-flat:checked~#spanish {
   color: #23c486;
 }
 
-input.check-toggle-round-flat:checked~.on {
+input.check-toggle-round-flat:checked~#english {
   color: #fff;
 }
 
@@ -650,7 +670,7 @@ input.check-toggle-round-flat:checked~.on {
   text-align: center;
 }
 
-.switch>span.on {
+.switch>span#english {
   left: 0;
   padding-left: 4px;
   color: #23c486;
@@ -663,7 +683,7 @@ input.check-toggle-round-flat:checked~.on {
   user-select: none;
 }
 
-.switch>span.off {
+.switch>span#spanish {
   right: 0;
   padding-right: 4px;
   color: #fff;
@@ -757,13 +777,4 @@ input.check-toggle-round-flat:checked+label:after {
 .es_lang {
   display: none;
   transition: display .5s;
-}
-
-.active-lang {
-  transition: display .5s;
-}
-
-.active-side {
-  transition: all .5s;
-  opacity: 1 !important;
 }
