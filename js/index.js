@@ -1,76 +1,41 @@
 //Form validation NO ANDA LCDLL
 
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
 
-//Show input error messages
-function showError(input, message) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control error';
-    const small = formControl.querySelector('small');
-    small.innerText = message;
-}
-
-//show success colour
-function showSucces(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control success';
-}
-
-//check email is valid
-function checkEmail(input) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(re.test(input.value.trim())) {
-        showSucces(input)
-    }else {
-        showError(input,'Email is not invalid');
+function contactForm() {
+    var contactName = document.getElementById("name").value;
+    var contactEmail = document.getElementById("email").value;
+    var contactMessage = document.getElementById("message").value;
+    var contactError_message = document.getElementById("error_message");
+  
+    contactError_message.style.padding = "10px";
+  
+    var text;
+  
+    if (contactName.length < 3) {
+      text = "Enter a valid name (more than 3 characters)";
+      contactError_message.innerHTML = text;
+      return false;
     }
-}
-
-
-//checkRequired fields
-function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
-            showError(input,`${getFieldName(input)} is required`)
-        }else {
-            showSucces(input);
-        }
-    });
-}
-
-
-//check input Length
-function checkLength(input, min ,max) {
-    if(input.value.length < min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
-    }else {
-        showSucces(input);
+    
+    if (contactEmail.indexOf("@") == -1 || contactEmail.length < 6) {
+      text = "Enter a valid Email";
+      contactError_message.innerHTML = text;
+      return false;
     }
-}
-
-//get FieldName
-function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-
-//Event Listeners
-form.addEventListener('submit',function(e) {
-    e.preventDefault();
-
-    checkRequired([username, email, message]);
-    checkLength(name,3,15);
-    checkEmail(email);
-    checkMessage(message);
-});
+    if (contactMessage.length <= 140) {
+      text = "Message should have at least 140 characters";
+      contactError_message.innerHTML = text;
+      return false;
+    }
+    alert("Gracias por tu mensaje!");
+    return true;
+  }
 
 
 
-// Switch Languages --- Esta funcion no anda
+
+
+// Switch Languages --- Esta funcion no anda aun
 
 // var spanish = document.getElementById('spanish'),
 //     english = document.getElementById('english'),

@@ -14,7 +14,6 @@ html,
 
 * {
   font-family: Montserrat;
-  box-sizing: border-box;
 }
 
 main {
@@ -32,12 +31,13 @@ h1 {
   font-weight: bolder;
   padding: 10px 0px 10px 0px;
   margin: 10px 0px 10px 0px;
-  font-style: uppercase;
+  text-transform: uppercase;
 }
 
 header {
   background-color: #bec7c4;
   font-style: uppercase;
+  text-transform: uppercase;
 }
 
 /* Header */
@@ -160,7 +160,7 @@ ul#menu li a {
 }
 
 #circle-shape img {
-  width: 30%;
+  width: 25%;
   height: auto;
   float: left;
   margin: 2em;
@@ -234,7 +234,6 @@ ul#menu li a {
 
 /* Experience Styles */
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
 .container {
   max-width: 100%;
@@ -285,24 +284,6 @@ ul#menu li a {
   transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   object-fit: contain;
-}
-
-img .moreanlogo {
-  color: #4343F2;
-  filter: sepia(8%) saturation(100);
-  -webkit-filter: sepia(8%) saturation(100);
-}
-
-.yoizenlogo {
-  color: #4CCBC2;
-  filter: sepia(8%) saturation(100);
-  -webkit-filter: sepia(8%) saturation(100);
-}
-
-.istlyrlogo {
-  color: #ff1e87;
-  filter: sepia(8%) saturation(100);
-  -webkit-filter: sepia(8%) saturation(100);
 }
 
 .grid-item-wrapper {
@@ -463,81 +444,64 @@ img .moreanlogo {
 
 /* Form Styles */
 
-:root {
-  --succes-color: #2ecc71;
-  --error-color: #e74c3c;
-}
 
 .form-container {
-  max-width: 50%;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
-  border-radius: 5px;
-  box-sizing: border-box;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 50%;
 }
 
 .form {
-  padding: 30px 40px;
+  padding: 3em;
 }
 
 .form-control {
-  margin: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 1em;
   position: relative;
   width: 40%;
+  background-color: #f9f9f9 !important;
+  border: none !important;
 }
 
 .form-control input {
   display: block;
   width: 100%;
   padding: 10px;
-  font-size: 14px;
+  font-size: 1em;
+}
+
+.form-control #message {
+  height: 10em;
+  width: 100%;
 }
 
 .form-control input:focus {
   outline: 0;
   border-color: #777;
-
 }
 
-.form-control.success input {
-  border-color: var(--succes-color);
-}
-
-.form-control.error input {
-  border-color: var(--error-color);
-}
-
-.form-control small {
-  color: var(--error-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.form-control.error small {
-  visibility: visible;
-}
-
-
-.form-control textarea {
-  height: 4em;
-  width: 100%;
+#error_message {
+  margin-bottom: 20px;
+  background: #c42360;
+  color: white;
+  padding: 0px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.5s ease;
 }
 
 button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
+  width: 50%;
   border: none;
   background: #23C486;
   color: #FFF;
-  margin: 0 0 5px;
+  margin: auto;
   padding: 10px;
   font-size: 1em;
   font-family: Montserrat;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 #contact button[type="submit"]:hover {
@@ -573,7 +537,6 @@ button[type="submit"] {
   color: #000;
 }
 
-*/
 /* Footer Styles */
 
 /* Sticky */
@@ -668,7 +631,7 @@ button[type="submit"] {
   -o-transition-duration: 0.5s;
 }
 
-/* Multicoloured Hover Variations */
+/* Multicolored Hover Variations */
 
 #lab_social_icon_footer #social-fb:hover {
   color: #4267B2;
