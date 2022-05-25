@@ -22,8 +22,7 @@ main {
 }
 
 section {
-  margin: 0.5em;
-  padding: 0.5em;
+  margin: 2em;
 }
 
 h1 {
@@ -79,7 +78,7 @@ ul#menu li a {
   display: none;
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 816px) {
   .mybody {
     margin: 0;
     background-color: #f9f9f9;
@@ -134,10 +133,13 @@ ul#menu li a {
 
 /* About Section Styles */
 
+.about {
+  width: 100%;
+  height: auto;
+}
+
 #circle-shape {
   display: inline-block;
-  align-content: center;
-  justify-content: space-between;
   padding: 1em;
   margin: 1em;
 }
@@ -147,14 +149,15 @@ ul#menu li a {
   font-style: oblique;
   margin: 0.5em;
   text-align: justify;
+  
 }
 
-#circle-shape .sp_lang {
+/* #circle-shape .sp_lang {
   font-size: 1.5em;
   font-style: oblique;
   margin: 0.5em;
   text-align: justify;
-}
+} */
 
 #circle-shape img {
   width: 25%;
@@ -162,7 +165,6 @@ ul#menu li a {
   float: left;
   margin: 2em;
   border-radius: 50%;
-  -webkit-shape-outside: circle();
   shape-outside: circle();
 }
 
@@ -176,7 +178,7 @@ ul#menu li a {
     display: grid;
     align-content: center;
     justify-content: space-between;
-    margin: auto;
+    margin: 1em;
   }
 
   #circle-shape .en_lang {
@@ -184,10 +186,10 @@ ul#menu li a {
     margin: auto;
   }
 
-  #circle-shape .sp_lang {
+  /* #circle-shape .sp_lang {
     display: inline;
     margin: auto;
-  }
+  } */
 
   #circle-shape div {
     min-width: 100%;
@@ -203,7 +205,6 @@ ul#menu li a {
     width: 80%;
   }
 }
-
 
 
 /* Experience Styles */
@@ -360,12 +361,14 @@ ul#menu li a {
   visibility: hidden;
   opacity: 0;
   z-index: 999;
+  overflow-y: scroll;
 }
 
 .overlay:target {
   visibility: visible;
   opacity: 1;
 }
+
 
 .popup {
   margin: 70px auto;
@@ -392,7 +395,7 @@ ul#menu li a {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 
 .popup .close:hover {
@@ -401,14 +404,25 @@ ul#menu li a {
 
 .popup .content {
   max-height: 40%;
-  overflow: auto;
   text-align: justify;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 500px) {
 
   .popup {
     width: 80%;
+  }
+
+  .content p {
+    overflow: scroll;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .popup {
+    width: 90%;
   }
 
   .content p {

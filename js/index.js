@@ -1,35 +1,43 @@
-//Form validation NO ANDA LCDLL
+// Close navbar
 
+$('.nav-toggle>li>a').on('click', function() {
+  $('.navbar-collapse').collapse('hide');
+});
+
+
+
+
+//Form validation 
 
 function contactForm() {
-    var contactName = document.getElementById("name").value;
-    var contactEmail = document.getElementById("email").value;
-    var contactMessage = document.getElementById("message").value;
-    var contactError_message = document.getElementById("error_message");
-  
-    contactError_message.style.padding = "10px";
-  
-    var text;
-  
-    if (contactName.length < 3) {
-      text = "Enter a valid name (more than 3 characters)";
-      contactError_message.innerHTML = text;
-      return false;
-    }
-    
-    if (contactEmail.indexOf("@") == -1 || contactEmail.length < 6) {
-      text = "Enter a valid Email";
-      contactError_message.innerHTML = text;
-      return false;
-    }
-    if (contactMessage.length <= 140) {
-      text = "Message should have at least 140 characters";
-      contactError_message.innerHTML = text;
-      return false;
-    }
-    alert("Gracias por tu mensaje!");
-    return true;
+  var contactName = document.getElementById("name").value;
+  var contactEmail = document.getElementById("email").value;
+  var contactMessage = document.getElementById("message").value;
+  var contactError_message = document.getElementById("error_message");
+
+  contactError_message.style.padding = "1em";
+
+  var text;
+
+  if (contactName.length < 3) {
+    text = "The name should have more than 3 characters";
+    contactError_message.innerHTML = text;
+    return false;
   }
+
+  if (contactEmail.indexOf("@") == -1 || contactEmail.length < 6) {
+    text = "Enter a valid Email";
+    contactError_message.innerHTML = text;
+    return false;
+  }
+  if (contactMessage.length <= 140) {
+    text = "Message should have at least 140 characters";
+    contactError_message.innerHTML = text;
+    return false;
+  }
+  alert("Gracias por tu mensaje!");
+  return true;
+}
 
 
 
