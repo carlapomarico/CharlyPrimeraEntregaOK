@@ -20,7 +20,7 @@
 
 <body class="mybody">
     <!-- Header Start -->
-    <header class="nav-menu">
+    <header>
         <label for="nav-toggle" class="nav-toggle-label"></label>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <!-- Menu Start -->
@@ -225,7 +225,7 @@
                             <div class="popup">
                                 <a class="close" href="index.html#education">&times;</a>
                                 <h4 class="en_lang">Spanish and literature professorship</h4>
-                                <h4 class="sp_lang">Profesorado de espanol y literatura</h4>
+                                <h4 class="sp_lang">Profesorado de español y literatura</h4>
                                 <h6>03.2008 - 07.2017</h6>
                                 <div class="content">
                                     <p>.</p>
@@ -258,8 +258,9 @@
         <section>
             <h1 class="en_lang" id="contactForm">Contact</h1>
             <h1 class="sp_lang">Contacto</h1>
-            <div class="form-container">
-                <form id="form" class="form" action="" onsubmit="return contactForm();">
+
+            <div class="container form-container">
+                <form id="form" action="" onsubmit="return contactForm();">
                     <div class="form-control">
                         <div id="error_message"></div>
                         <input type="text" id="name" placeholder="Enter your Name">
@@ -270,7 +271,9 @@
                     <div class="form-control">
                         <textarea id="message" placeholder="Enter your Message..." rows="5" name="message"></textarea>
                     </div>
-                    <button type="submit" id="contact">Submit</button>
+                    <div class="form-control">
+                        <button type="submit" id="contact">Submit</button>
+                    </div>
                 </form>
             </div>
         </section>
