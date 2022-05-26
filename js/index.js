@@ -1,40 +1,24 @@
-// Close navbar
+// Close navbar NO ANDA
 
+// $(document).ready(function () {
+
+//   $('.nav-item').click(function () {
+//     $('.navbar nav').removeClass('show');
+//   });
+
+// });
 
 // sticky menu 
 
-// window.onscroll = function() {myFunction()};
-
-// var navbar = document.getElementById("header");
-
-// var sticky = navbar.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
+// $(window).scroll(function(){
+//   if ($(window).scrollTop() >= 300) {
+//       $('nav').addClass('fixed-header');
+//       $('nav div').addClass('sticky');
 //   }
-// }
-
-
-
-
-
-
-
-// $('ul #menu li').click(function() {
-//   $(this).parent().css('visibility','visible');
-// })
-
-
-// function change() {
-//   document.getElementById("menu").style.visibility = "hidden";
-// }
-
-
-// $('#menu ul li').click(function(){
-//   $(this).addClass('open');
+//   else {
+//       $('nav').removeClass('fixed-header');
+//       $('header nav').removeClass('sticky');
+//   }
 // });
 
 
