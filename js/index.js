@@ -46,12 +46,12 @@ function contactForm() {
     contactError_message.innerHTML = text;
     return false;
   }
-  if (contactMessage.length <= 140) {
-    text = "Message should have at least 140 characters";
+  if (contactMessage.length <= 30) {
+    text = "Message should have at least 30 characters";
     contactError_message.innerHTML = text;
     return false;
   }
-  alert("Gracias por tu mensaje!");
+  alert("Thanks for your message!");
   return true;
 }
 
