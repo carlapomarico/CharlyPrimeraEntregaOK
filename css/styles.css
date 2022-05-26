@@ -20,20 +20,25 @@ html,
 main {
   background-color: #F9F9F9;
   width: 100%;
-  padding: 1em;
 }
 
+
 section {
-  margin: 2em;
+  margin: 1em;
+  scroll-behavior: smooth;
 }
 
 h1 {
   text-align: center;
   font-size: 3em;
-  font-weight: bolder;
-  padding: 10px 0px 10px 0px;
-  margin: 10px 0px 10px 0px;
+  font-weight: 800;
+  margin: 1.5em 1em 2em 1.5em !important;
   text-transform: uppercase;
+  background-color: #c7ccc7;
+}
+
+h1 #welcome {
+  margin-top: 3em !important;
 }
 
 nav {
@@ -51,6 +56,7 @@ nav {
 header {
   position: sticky;
   top: 0;
+  z-index: 9;
 }
 
 ul#menu {
@@ -118,6 +124,10 @@ ul#menu li a {
     font-family: Montserrat;
   }
 
+  h1 #welcome {
+    margin-top: 3em !important;
+  }
+
   ul#menu li.hide {
     display: none !important;
   }
@@ -143,15 +153,15 @@ ul#menu li a {
   width: 100%;
 }
 
-.sticky+main {
+.sticky+body {
   padding-top: 60px;
 }
 
 /* Welcome Section Styles */
 
-.welcome-text {
-  font-size: 1.5em;
-  text-align: justify;
+.aboutqa-text {
+  font-size: 1.75em;
+  font-style: oblique;
   margin: 1em 1em 1em 1em;
 }
 
@@ -168,6 +178,7 @@ ul#menu li a {
   height: 100%;
   width: 100%;
   position: absolute;
+  font-style: oblique;
 }
 
 /* About Section Styles */
@@ -179,7 +190,6 @@ ul#menu li a {
 
 #circle-shape {
   display: inline-block;
-  padding: 1em;
   margin: 1em;
 }
 
@@ -226,6 +236,7 @@ ul#menu li a {
     display: inline;
     margin: auto;
     font-size: 1.25em;
+    text-align: left;
   }
 
   /* #circle-shape .sp_lang {
@@ -246,10 +257,22 @@ ul#menu li a {
     justify-content: center;
     width: 45%;
   }
+
+  .aboutqa-text {
+    font-size: 1.25em;
+    font-style: oblique;
+    margin: 1em 1em 1em 1em;
+  }
+
 }
 
 
 @media(max-width: 600px) {
+
+  h1 #welcome {
+    margin-top: 3em !important;
+  }
+
   #circle-shape {
     display: grid;
     align-content: center;
@@ -261,6 +284,7 @@ ul#menu li a {
     display: inline;
     margin: auto;
     font-size: 1em;
+    text-align: left;
   }
 
   /* #circle-shape .sp_lang {
