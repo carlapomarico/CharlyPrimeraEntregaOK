@@ -10,16 +10,16 @@
 
 // sticky menu 
 
-// $(window).scroll(function(){
-//   if ($(window).scrollTop() >= 300) {
-//       $('nav').addClass('fixed-header');
-//       $('nav div').addClass('sticky');
-//   }
-//   else {
-//       $('nav').removeClass('fixed-header');
-//       $('header nav').removeClass('sticky');
-//   }
-// });
+$(document).scroll(function(){
+  if ($(window).scrollTop() >= 300) {
+      $('header').addClass('sticky');
+      $('header nav').addClass('sticky');
+  }
+  // else {
+  //     $('nav').removeClass('fixed-header');
+  //     $('header nav').removeClass('sticky');
+  // }
+});
 
 
 
