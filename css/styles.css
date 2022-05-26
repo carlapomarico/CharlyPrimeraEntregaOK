@@ -22,8 +22,7 @@ main {
 }
 
 section {
-  margin: 0.5em;
-  padding: 0.5em;
+  margin: 2em;
 }
 
 h1 {
@@ -35,7 +34,7 @@ h1 {
   text-transform: uppercase;
 }
 
-header {
+nav {
   background-color: #bec7c4;
   font-style: uppercase;
   text-transform: uppercase;
@@ -43,6 +42,22 @@ header {
   width: 100%;
   background-color: #bec7c4;
   table-layout: fixed;
+}
+
+.iframe {
+  overflow: hidden;
+  padding-bottom: 500px;
+  /* Adecua este valor para controlar la altura del video */
+  position: relative;
+  height: 0;
+}
+
+.iframe iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 /* Header */
@@ -56,6 +71,11 @@ ul#menu {
   text-align: center;
   background-color: #bec7c4;
 }
+
+ul#menu li.open ul {
+  visibility: visible;
+}
+
 
 ul#menu li {
   display: inline;
@@ -77,9 +97,10 @@ ul#menu li a {
 
 .nav-toggle {
   display: none;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 816px) {
   .mybody {
     margin: 0;
     background-color: #f9f9f9;
@@ -87,6 +108,7 @@ ul#menu li a {
 
   ul#menu {
     display: none;
+    overflow: hidden;
     width: 100%;
     background-color: #bec7c4;
     table-layout: fixed;
@@ -134,10 +156,13 @@ ul#menu li a {
 
 /* About Section Styles */
 
+.about {
+  width: 100%;
+  height: auto;
+}
+
 #circle-shape {
   display: inline-block;
-  align-content: center;
-  justify-content: space-between;
   padding: 1em;
   margin: 1em;
 }
@@ -147,22 +172,24 @@ ul#menu li a {
   font-style: oblique;
   margin: 0.5em;
   text-align: justify;
+
 }
 
-#circle-shape .sp_lang {
+/* #circle-shape .sp_lang {
   font-size: 1.5em;
   font-style: oblique;
   margin: 0.5em;
   text-align: justify;
-}
+} */
 
 #circle-shape img {
   width: 25%;
   height: auto;
   float: left;
-  margin: 2em;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
   border-radius: 50%;
-  -webkit-shape-outside: circle();
   shape-outside: circle();
 }
 
@@ -176,7 +203,7 @@ ul#menu li a {
     display: grid;
     align-content: center;
     justify-content: space-between;
-    margin: auto;
+    margin-bottom: 2em;
   }
 
   #circle-shape .en_lang {
@@ -184,10 +211,10 @@ ul#menu li a {
     margin: auto;
   }
 
-  #circle-shape .sp_lang {
+  /* #circle-shape .sp_lang {
     display: inline;
     margin: auto;
-  }
+  } */
 
   #circle-shape div {
     min-width: 100%;
@@ -198,12 +225,11 @@ ul#menu li a {
   #circle-shape img {
     display: grid;
     align-content: center;
-    margin: auto;
+    margin-bottom: 2em;
     justify-content: center;
     width: 80%;
   }
 }
-
 
 
 /* Experience Styles */
@@ -360,6 +386,29 @@ ul#menu li a {
   visibility: hidden;
   opacity: 0;
   z-index: 999;
+  overflow-y: scroll;
+}
+
+/*Scrollbars*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .overlay:target {
@@ -367,10 +416,11 @@ ul#menu li a {
   opacity: 1;
 }
 
+
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: #fff;
+  background: #F1F1F1;
   border-radius: 10px;
   width: 50%;
   position: relative;
@@ -392,7 +442,7 @@ ul#menu li a {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 
 .popup .close:hover {
@@ -401,14 +451,27 @@ ul#menu li a {
 
 .popup .content {
   max-height: 40%;
-  overflow: auto;
   text-align: justify;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 500px) {
 
   .popup {
     width: 80%;
+  }
+
+  .content p {
+    overflow-y: scroll;
+    padding: 0% !important;
+  }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .popup {
+    width: 90%;
   }
 
   .content p {
@@ -419,15 +482,25 @@ ul#menu li a {
 /* Form Styles */
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical
+    /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
@@ -603,24 +676,6 @@ button[type="submit"]:active {
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-#lab_social_icon_footer .social:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-
-#lab_social_icon_footer .social {
-  -webkit-transform: scale(0.8);
-
-  /* Browser Variations: */
-
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-}
-
 /* Multicolored Hover Variations */
 
 #lab_social_icon_footer #social-fb:hover {
@@ -774,7 +829,8 @@ input.check-toggle-round-flat+label:after {
 
 }
 
-input.check-toggle-round-flat:checked+label {}
+/* 
+input.check-toggle-round-flat:checked+label {} */
 
 input.check-toggle-round-flat:checked+label:after {
   margin-left: 40px;
