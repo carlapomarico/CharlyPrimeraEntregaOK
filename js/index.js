@@ -10,10 +10,10 @@
 
 // sticky menu 
 
-$(document).scroll(function(){
+$(document).scroll(function () {
   if ($(window).scrollTop() >= 300) {
-      $('header').addClass('sticky');
-      $('header nav').addClass('sticky');
+    $('header').addClass('sticky');
+    $('header nav').addClass('sticky');
   }
   // else {
   //     $('nav').removeClass('fixed-header');
@@ -46,13 +46,16 @@ function contactForm() {
     contactError_message.innerHTML = text;
     return false;
   }
+
   if (contactMessage.length <= 30) {
     text = "Message should have at least 30 characters";
     contactError_message.innerHTML = text;
     return false;
   }
+
   alert("Thanks for your message!");
   return true;
+
 }
 
 
