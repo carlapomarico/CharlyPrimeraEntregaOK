@@ -1,9 +1,41 @@
 // Close navbar
 
-$('.nav-toggle>li>a').on('click', function() {
-  $('.navbar-collapse').collapse('hide');
-});
 
+// sticky menu 
+
+// window.onscroll = function() {myFunction()};
+
+// var navbar = document.getElementById("header");
+
+// var sticky = navbar.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
+
+
+
+
+
+
+
+// $('ul #menu li').click(function() {
+//   $(this).parent().css('visibility','visible');
+// })
+
+
+// function change() {
+//   document.getElementById("menu").style.visibility = "hidden";
+// }
+
+
+// $('#menu ul li').click(function(){
+//   $(this).addClass('open');
+// });
 
 
 
