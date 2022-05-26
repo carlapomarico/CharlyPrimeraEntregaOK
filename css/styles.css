@@ -10,6 +10,7 @@ html,
   height: 100%;
   width: 100%;
   background-color: #F9F9F9;
+  margin: 0;
 }
 
 * {
@@ -19,6 +20,7 @@ html,
 main {
   background-color: #F9F9F9;
   width: 100%;
+  padding: 1em;
 }
 
 section {
@@ -35,32 +37,21 @@ h1 {
 }
 
 nav {
-  background-color: #bec7c4;
+  background-color: #333;
   font-style: uppercase;
   text-transform: uppercase;
   box-sizing: border-box;
   width: 100%;
-  background-color: #bec7c4;
+  background-color: #333;
   table-layout: fixed;
 }
 
-.iframe {
-  overflow: hidden;
-  padding-bottom: 500px;
-  /* Adecua este valor para controlar la altura del video */
-  position: relative;
-  height: 0;
-}
-
-.iframe iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
 /* Header */
+
+header {
+  position: sticky;
+  top: 0;
+}
 
 ul#menu {
   margin: 0 auto;
@@ -69,7 +60,7 @@ ul#menu {
   font-family: Montserrat;
   font-size: 1.5em;
   text-align: center;
-  background-color: #bec7c4;
+  background-color: #333;
 }
 
 ul#menu li.open ul {
@@ -110,14 +101,14 @@ ul#menu li a {
     display: none;
     overflow: hidden;
     width: 100%;
-    background-color: #bec7c4;
+    background-color: #333;
     table-layout: fixed;
     transition: all .3s ease-in;
   }
 
   ul#menu li {
     display: block;
-    border-bottom: 1px solid #bec7c4;
+    border-bottom: 1px solid #333;
     line-height: 3;
     color: white;
   }
@@ -146,12 +137,37 @@ ul#menu li a {
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky+main {
+  padding-top: 60px;
+}
+
 /* Welcome Section Styles */
 
 .welcome-text {
   font-size: 1.5em;
   text-align: justify;
   margin: 1em 1em 1em 1em;
+}
+
+.iframe {
+  overflow: hidden;
+  padding-bottom: 500px;
+  position: relative;
+  height: 0;
+}
+
+.iframe iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 /* About Section Styles */
@@ -183,7 +199,7 @@ ul#menu li a {
 } */
 
 #circle-shape img {
-  width: 25%;
+  width: 30%;
   height: auto;
   float: left;
   margin-bottom: 2em;
@@ -198,6 +214,41 @@ ul#menu li a {
   align-content: space-between
 }
 
+@media(max-width: 900px) {
+  #circle-shape {
+    display: inline-block;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 2em;
+  }
+
+  #circle-shape .en_lang {
+    display: inline;
+    margin: auto;
+    font-size: 1.25em;
+  }
+
+  /* #circle-shape .sp_lang {
+    display: inline;
+    margin: auto;
+  } */
+
+  #circle-shape div {
+    min-width: 100%;
+    display: grid;
+    margin: auto;
+  }
+
+  #circle-shape img {
+    display: grid;
+    align-content: center;
+    margin: 2em;
+    justify-content: center;
+    width: 45%;
+  }
+}
+
+
 @media(max-width: 600px) {
   #circle-shape {
     display: grid;
@@ -209,6 +260,7 @@ ul#menu li a {
   #circle-shape .en_lang {
     display: inline;
     margin: auto;
+    font-size: 1em;
   }
 
   /* #circle-shape .sp_lang {
@@ -230,6 +282,8 @@ ul#menu li a {
     width: 80%;
   }
 }
+
+
 
 
 /* Experience Styles */
@@ -389,6 +443,10 @@ ul#menu li a {
   overflow-y: scroll;
 }
 
+.yoizenlogo {
+  image-resolution: 80%;
+}
+
 /*Scrollbars*/
 
 /* width */
@@ -439,7 +497,7 @@ ul#menu li a {
   top: 20px;
   right: 30px;
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 1.8em;
   font-weight: bold;
   text-decoration: none;
   color: #000;
@@ -612,7 +670,7 @@ button[type="submit"]:active {
 
 #lab_social_icon_footer {
   padding: 1em;
-  background-color: #bec7c4;
+  background-color: #333;
   width: 100%;
 }
 
@@ -651,13 +709,13 @@ button[type="submit"]:active {
   display: block;
   font-family: Montserrat;
   position: relative;
-  color: black;
+  color: #F9F9F9;
   padding: 1px;
 }
 
 
 .v-effect-link a:hover {
-  color: #000;
+  color: #f9f9f9;
 }
 
 .v-effect-link a:hover:before {
@@ -670,7 +728,7 @@ button[type="submit"]:active {
   position: absolute;
   width: 0;
   height: .5px;
-  background-color: #000;
+  background-color: #f9f9f9;
   bottom: calc(-1px);
   right: 0;
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
