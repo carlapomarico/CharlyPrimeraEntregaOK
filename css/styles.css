@@ -45,13 +45,19 @@ nav {
 }
 
 .iframe {
-  width: 100%;
+  overflow: hidden;
+  padding-bottom: 500px;
+  /* Adecua este valor para controlar la altura del video */
+  position: relative;
+  height: 0;
+}
+
+.iframe iframe {
+  left: 0;
+  top: 0;
   height: 100%;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;      
-  margin: auto;
+  width: 100%;
+  position: absolute;
 }
 
 /* Header */
@@ -180,7 +186,9 @@ ul#menu li a {
   width: 25%;
   height: auto;
   float: left;
-  margin: 2em;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
   border-radius: 50%;
   shape-outside: circle();
 }
@@ -195,7 +203,7 @@ ul#menu li a {
     display: grid;
     align-content: center;
     justify-content: space-between;
-    margin: 1em;
+    margin-bottom: 2em;
   }
 
   #circle-shape .en_lang {
@@ -217,7 +225,7 @@ ul#menu li a {
   #circle-shape img {
     display: grid;
     align-content: center;
-    margin: auto;
+    margin-bottom: 2em;
     justify-content: center;
     width: 80%;
   }
