@@ -41,7 +41,7 @@ h1 #welcome {
   margin-top: 2em !important;
 }
 
-#contactForm h1  {
+#contactForm h1 {
   margin-bottom: 0.5em !important;
 }
 
@@ -347,13 +347,14 @@ ul#menu li a {
 
 .wrapping-link {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 2;
   color: currentColor;
   background-color: none;
+  vertical-align: middle;
 }
 
 .grid-item-wrapper img {
@@ -386,15 +387,15 @@ ul#menu li a {
 }
 
 .wrapper-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: #23c486;
-  text-align: left;
-  font-size: 1.5em;
+  /* transform: translate(-50%, -50%); */
+  /* border: #23c486; */
+  text-align: center;
+  align-content: center;
+  font-size: 1em;
   font-style: oblique;
   font-weight: 600;
+  vertical-align: middle;
+  padding-top: 20%;
 }
 
 .wrapper-child a {
@@ -414,6 +415,7 @@ ul#menu li a {
 .grid-item:hover .grid-item-wrapper {
   margin: -2% -2%;
 }
+
 
 @media(max-width: 1333px) {
   .grid-item {
@@ -447,6 +449,103 @@ ul#menu li a {
   .grid-item {
     flex-basis: 100%;
   }
+}
+
+.adobe-download-button-container {
+  text-align: center;
+  vertical-align: middle;
+  height: 250px;
+}
+
+.adobe-pdf-download {
+  border: 2px solid #de4533;
+  background: transparent;
+  color: #de4533;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 10px 20px 0px 20px;
+  transition: background 0.5s, color 0.5s;
+  display: inline-flex;
+}
+
+.adobe-pdf-download a {
+  text-decoration: none;
+  color: #de4533;
+  transition: background 0.5s, color 0.5s;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 0.8em;
+  align-content: space-around!important;
+  justify-content: space-around!important;
+}
+
+
+.adobe-pdf-download img {
+  text-decoration: none;
+  color: #de4533;
+  transition: background 0.5s, color 0.5s;
+  font-family: arial;
+  font-weight: bold;
+  align-content: space-around!important;
+  justify-content: space-around!important;
+}
+
+.adobe-pdf-download a:hover {
+  color: white;
+  background: #de4533;
+  transition: background 0.5s, color 0.5s;
+}
+
+.adobe-pdf-download:hover a {
+  color: white;
+  background: #de4533;
+  transition: background 0.5s, color 0.5s;
+}
+
+.adobe-pdf-download:hover img {
+  color: white;
+  background: #de4533;
+  transition: background 0.5s, color 0.5s;
+}
+
+.adobe-pdf-download:hover {
+  background: #de4533;
+  color: white;
+  transition: background 0.5s, color 0.5s;
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.adobe-pdf-download img {
+  margin: 0px 10px 0px 0px;
+  padding: 0px;
+  height: 25px;
 }
 
 /* Clickable experiences / studies */
